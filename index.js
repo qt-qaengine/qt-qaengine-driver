@@ -1,4 +1,7 @@
-import {SocketDriver} from './lib/driver';
+// SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
+// Copyright (c) 2026 Andrei Kozhevnikov <coderusinbox@gmail.com>
+
+import {QtQaEngineDriver} from './lib/driver';
 import {startServer} from './lib/server';
 
 const DEFAULT_HOST = 'localhost';
@@ -14,5 +17,5 @@ async function main() {
   return await startServer(port, host);
 }
 
-export {SocketDriver, startServer, main};
-export default SocketDriver;
+export {QtQaEngineDriver, startServer, main};
+export default QtQaEngineDriver;

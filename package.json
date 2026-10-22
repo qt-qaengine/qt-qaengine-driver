@@ -1,37 +1,45 @@
 {
-  "name": "appium-socket-driver",
-  "description": "Socket driver",
+  "name": "appium-qt-qaengine-driver",
+  "description": "Appium and MCP adapter for qt-qaengine",
   "keywords": [
-    "appium"
+    "appium",
+    "qt",
+    "qt-qaengine"
   ],
-  "version": "1.0.7",
-  "author": "Andrey Kozhevnikov",
+  "version": "1.0.0",
+  "author": "Andrei Kozhevnikov <coderusinbox@gmail.com>",
+  "license": "PolyForm-Noncommercial-1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/coderus/appium-socket-driver.git"
+    "url": "https://github.com/coderus/qt-qaengine-driver.git"
   },
   "bugs": {
-    "url": "https://github.com/coderus/appium-socket-driver/issues"
+    "url": "https://github.com/coderus/qt-qaengine-driver/issues"
   },
   "engines": [
     "node"
   ],
   "appium": {
-    "driverName": "socket",
-    "automationName": "Socket",
+    "driverName": "qtqaengine",
+    "automationName": "QtQaEngine",
     "platformNames": [
-      "Socket"
+      "QtQaEngine"
     ],
-    "mainClass": "SocketDriver"
+    "mainClass": "QtQaEngineDriver"
   },
   "main": "./build/index.js",
-  "bin": {},
+  "bin": {
+    "qt-qaengine-mcp": "./build/mcp.js"
+  },
   "directories": {
     "lib": "lib"
   },
   "files": [
     "lib",
-    "build"
+    "build",
+    "LICENSE",
+    "NOTICE",
+    "OPEN_SOURCE_GRANT"
   ],
   "dependencies": {
     "@appium/support": "^4.0.0",
@@ -46,7 +54,7 @@
   "devDependencies": {
     "appium": "^2.15.0",
     "appium-gulp-plugins": "^5.0.0",
-    "appium-socket-driver": "file:.",
+    "appium-qt-qaengine-driver": "file:.",
     "chai": "^4.1.2",
     "gulp": "^4.0.0",
     "mocha": "^10.0.0"
